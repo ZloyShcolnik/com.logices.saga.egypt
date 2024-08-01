@@ -39,11 +39,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.4.2
-      - uses: actions/cache@v2
-        with:
-          path: Library
-          key: Library-Android
-          restore-keys: Library-
+
       - name: Free Disk Space for Android
         run: |
           sudo swapoff -a
@@ -73,11 +69,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.4.2
-      - uses: actions/cache@v2
-        with:
-          path: Library
-          key: Library-Android
-          restore-keys: Library-
+        
       - name: Free Disk Space for Android
         run: |
           sudo swapoff -a
